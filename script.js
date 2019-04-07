@@ -2,7 +2,7 @@ const collectArray = [{
 	name: "Lamborghini",
 	color: "Green",
 	speed: 180,
-	style: "coup",
+	style: "Coup",
 	forsale: true
 },{
 	name: "Ferrari",
@@ -33,6 +33,6 @@ const collectArray = [{
 var myVue = new Vue({
       el: "#collect",
       data: {
-        cars: collectArray
+		  cars: collectArray
       }
     });
