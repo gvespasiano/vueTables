@@ -33,9 +33,6 @@ const collectArray = [{
 var myVue = new Vue({
       el: "#collect",
       data: {
-        collectArray: [
-          {},
-          {},
-        ]
+        cars: collectArray
       }
     });
