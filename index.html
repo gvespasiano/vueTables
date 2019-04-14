@@ -16,23 +16,23 @@
 			<th>Body Style</th>
 			<th>Buy Now!</th>
 			</thead>
- 		   <tr v-for="(cars, index) in cars" v-bind:class="{even: (index) % 2 !== 0,forSale: cars.forsale === true}">
+ 		   <tr v-for="(cars, index) in collectArray" v-bind:class="{even: (index) % 2 !== 0,forSale: cars.forsale === true}">
 			   <td>{{cars.name}}</td>
 			   <td>{{cars.color}}</td>
 			   <td>{{cars.speed}}</td>
 			   <td>{{cars.style}}</td>
 			   <td>{{cars.forsale}}</td>
-			   <td><button v-on:click.prevent="">Delete</button>
+			   <td><button v-on:click.prevent="deleteCar(cars)">Delete</button>
 		   </tr>
 		</table>
 		<div id="form">
 			<h2>Add your car!</h2>
-			<form v-on:submit.prevent="addItem">
+			<form v-on:submit.prevent="addCar">
 				<p><label>Name <input type="text" v-model="newName"/></label></p>
 				<p><label>Color <input type="text" v-model="newColor"/></label></p>
 				<p><label>Speed <input type="number" v-model="newSpeed"/></label></p>
-				<p><label>Body <input type="text" v-model="newBody"/></label></p>
-				<p><label>Body <input id="car-sale" type="text" v-model="newSale"/></label></p>
+				<p><label>Body Style<input type="text" v-model="newStyle"/></label></p>
+				<p><label>Check yes if for sale <input type="checkbox" v-model="newSale"/></label></p>
 			<button type="submit">Enter</button>
 			</form>
 		</div>
