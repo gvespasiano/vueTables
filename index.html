@@ -22,8 +22,20 @@
 			   <td>{{cars.speed}}</td>
 			   <td>{{cars.style}}</td>
 			   <td>{{cars.forsale}}</td>
+			   <td><button v-on:click.prevent="">Delete</button>
 		   </tr>
 		</table>
+		<div id="form">
+			<h2>Add your car!</h2>
+			<form v-on:submit.prevent="addItem">
+				<p><label>Name <input type="text" v-model="newName"/></label></p>
+				<p><label>Color <input type="text" v-model="newColor"/></label></p>
+				<p><label>Speed <input type="number" v-model="newSpeed"/></label></p>
+				<p><label>Body <input type="text" v-model="newBody"/></label></p>
+				<p><label>Body <input id="car-sale" type="text" v-model="newSale"/></label></p>
+			<button type="submit">Enter</button>
+			</form>
+		</div>
 	</div>
 	
 

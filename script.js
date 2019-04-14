@@ -1,3 +1,4 @@
+//Collection data array
 const collectArray = [{
 	name: "Lamborghini",
 	color: "Green",
@@ -23,16 +24,23 @@ const collectArray = [{
 	style: "Sedan",
 	forsale: false
 },{
-	name: "Jaguard",
+	name: "Jaguar",
 	color: "Green",
 	speed: 190,
 	style: "Coup",
 	forsale: true
 }];
 
+//inserting collection array into vue
 var myVue = new Vue({
       el: "#collect",
       data: {
-		  cars: collectArray
+		  cars: collectArray,
+		  newName:"",
+		  newColor:"",
+		  newSpeed:"",
+		  newStyle:"",
+		  newBody:"",
+		  newSale:""
       }
     });
