@@ -63,6 +63,7 @@ var myVue = new Vue({
 					  })
 	 			 	},
 					addCar: function (){
+						if (this.checkFields()){
 						let newCar = {
 							name: this.newName,
 							color: this.newColor,
@@ -72,9 +73,33 @@ var myVue = new Vue({
 							id: this.newID
 						};
 						this.collectArray.push(newCar);
+						this.newName = this.newColor = this.newSpeed = this.newStyle = this.newSale = this.newID = "";
+					}
+					},
+					checkFields: function (){
+						if (this.newName === "") {
+							alert:("Please fill in the car's name");
+							return false;
+						}
+						else if (this.newColor === "") {
+							alert:("Please fill in the car's color");
+							return false;
+						}
+						else if (this.newSpeed === "") {
+							alert:("Please fill in the car's speed");
+							return false;
+						}
+						else if (this.newStyle === "") {
+							alert:("Please fill in the car's body style");
+							return false;
+						}
+						else if (this.newColor === "") {
+							alert:("Please check if the car is for sale");
+							return false;
+						}
+						else {
+							return true;
+						}
 					}
 				  }
-				  
-				  
-				  
 });
